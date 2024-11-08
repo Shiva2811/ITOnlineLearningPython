@@ -13,4 +13,3 @@ new_list = my_list+[2,3,4]
 print(new_list)
 print(len(new_list))
 print([x**3 for x in new_list])
-print(new_list.sort())
