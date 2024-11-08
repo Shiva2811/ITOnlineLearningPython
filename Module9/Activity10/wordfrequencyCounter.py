@@ -5,12 +5,13 @@ def inputText(text):
     frequency ={}
 
     #Define a helper recursive function to update frequency
-    def update_frequency(word):
-        if not word:
+    def update_frequency(words):
+        #Base case : if there are no more words to process, retirn 
+        if not words:
             return
         
         #Take the first word
-        word = word[0]
+        word = words[0]
 
         #update the dictionary with word frequency
         if word in frequency:
@@ -19,7 +20,7 @@ def inputText(text):
             frequency[word]=1
         
         #Recursive call wiht the rest of the words
-        update_frequency(word[1:1])
+        update_frequency(words[1:])
     
     #special case : handle empty input
     if not text:
