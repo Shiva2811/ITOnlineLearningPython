@@ -65,12 +65,12 @@ def delete_recipe(title):
 
 
 #Save recipes to file
-def save_recipe_to_file(filename="ITOnlineLearning/recipes.json"):
+def save_recipe_to_file(filename="ITOnlineLearning/ModuleFinal/recipes.json"):
     with open(filename,"w") as file:
         json.dump([recipe.to_dict() for recipe in recipes], file)
     print("Recipe saved to file.")
 
-def load_recipe_from_file(filename="ITOnlineLearning/recipes.json"):
+def load_recipe_from_file(filename="ITOnlineLearning/ModuleFinal/recipes.json"):
     global recipes
     try:
         with open(filename,"r") as file:
